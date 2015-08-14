@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Webview</title>
+    <style>
+      #container {
+        position: relative;
+        display: inline-block;
+        width: 320px;
+        height: 240px;
+        background-color: #000;
+        overflow: hidden;
+      }
+      #scaling {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 320px;
+        height: 240px;
+      }
+      webview {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <select id="togglefix">
+      <option value="on">Fix on</option>
+      <option value="off">Fix off</option>
+    </select>
+    <input id="range" type="range" step="1" min="0", max="200" value="100" />
+    <p id="scalevalue">100 %</p>
+    <div id="container">
+      <div id="scaling">
+        <webview id="webview" src="http://www.google.com/chrome" allowtransparency="on"></webview>
+      </div>
+    </div>
+    <script src="scale.js"></script>
+  </body>
+</html>
